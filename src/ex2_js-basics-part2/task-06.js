@@ -7,7 +7,7 @@ module.exports = function simpleNumber(number) {
 	}
 
 	let finalArray = [];
-	for (let i = 1; i <= number / 2 + 1; i++) {
+	for (let i = 1; i <= number; i++) {
 		if (number % i === 0) {
 			finalArray.push(i);
 		}
