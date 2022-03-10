@@ -11,5 +11,6 @@ module.exports = function getProperty(object, propertyPath) {
       return undefined;
     }
   }
+
   return finalObj;
 };
