@@ -1,4 +1,4 @@
-module.exports = function objKey(str, obj) {
+module.exports = function getNewObjKey(str, obj) {
   const finalArr = { ...obj };
 
   if (obj.hasOwnProperty(str)) {
