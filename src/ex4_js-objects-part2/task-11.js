@@ -1,6 +1,5 @@
 /* eslint-disable no-tabs */
 /* eslint-disable no-restricted-syntax */
-/* eslint-disable linebreak-style */
 module.exports = function getUniqueSymbols(str) {
   const strToArr = str.split('');
   const finalObject = {};
