@@ -1,0 +1,46 @@
+html {
+  background-color: rgb(178, 218, 191);
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+}
+
+h1 {
+  font-size: 60px;
+  color: white;
+}
+
+h2 {
+  font-size: 2.5rem;
+  font-weight: 400;
+  color: red;
+}
+
+.orderedList {
+  font-weight: 700;
+  background-image: url('https://wallpaperaccess.com/full/1101182.jpg');
+}
+
+.unorderedList {
+  background-color: coral;
+}
+
+.descriptionList {
+  background: linear-gradient(blue, rgb(39, 1, 36));
+  color: #e2e2e2;
+}
+
+.listWithLinks {
+  background-color: rgba(76, 42, 109, 0.2);
+}
+
+.paragraphs {
+  font-family: 'Times New Roman', Times, serif;
+  font-weight: bold;
+  font-size: 1.2em;
+  color: #df4168;
+  background-image: url('https://www.sunnysports.com/blog/wp-content/uploads/2013/01/mountain-feature.jpg');
+  background-size: cover;
+  background-position-y: center;
+}

@@ -4,7 +4,27 @@
 		<meta charset="UTF-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap"
+			rel="stylesheet"
+		/>
+		<link rel="stylesheet" href="task-04.css" />
 		<title>Document</title>
+		<style>
+			.image {
+				min-width: 25vw;
+				margin-left: 5rem;
+				margin-bottom: 30px;
+				border: 7px solid green;
+				border-radius: 10px;
+				box-shadow: 12px 12px 2px 1px rgba(55, 231, 55, 0.4);
+			}
+
+			.preTag {
+				font-weight: 700;
+				background-color: aqua;
+			}
+		</style>
 	</head>
 	<body>
 		<div class="title">
@@ -26,11 +46,11 @@
 			<div class="unorderedList">
 				<h3>Unordered list</h3>
 				<ul>
-					<li>A</li>
-					<li>B</li>
-					<li>C</li>
-					<li>D</li>
-					<li>E</li>
+					<li style="font-size: 20px">A</li>
+					<li style="font-size: 30px">B</li>
+					<li style="font-size: 40px">C</li>
+					<li style="font-size: 30px">D</li>
+					<li style="font-size: 20px">E</li>
 				</ul>
 			</div>
 			<div class="listsWithColoredBackground" style="background-color: green">
@@ -38,16 +58,16 @@
 					<h3>Description list</h3>
 					<dl>
 						<dt>Name</dt>
-						<dd>Godzilla</dd>
+						<dd style="font-weight: 700; color: rgb(250, 180, 90)">Godzilla</dd>
 
 						<dt>Born</dt>
-						<dd>1952</dd>
+						<dd style="font-weight: 700; color: rgb(250, 180, 90)">1952</dd>
 
 						<dt>Birthplace</dt>
-						<dd>Japan</dd>
+						<dd style="font-weight: 700; color: rgb(250, 180, 90)">Japan</dd>
 
 						<dt>Color</dt>
-						<dd>Green</dd>
+						<dd style="font-weight: 700; color: rgb(250, 180, 90)">Green</dd>
 					</dl>
 				</div>
 				<div class="nestedList">
@@ -118,9 +138,9 @@
 
 		<hr />
 
-		<div class="tables">
-			<h3>Tables</h3>
-			<table>
+		<div class="tables" style="border: 0.5rem dashed blue">
+			<h3 style="margin-left: 20px">Tables</h3>
+			<table style="border: 0.2rem dashed green; margin: 15px">
 				<tr>
 					<td><b>First name</b></td>
 					<td><b>Last name</b></td>
@@ -138,10 +158,11 @@
 
 		<hr />
 
-		<div class="image">
+		<div>
 			<h3>Image</h3>
 
 			<img
+				class="image"
 				style="width: 250px"
 				src="https://icatcare.org/app/uploads/2018/06/Layer-1704-1200x630.jpg"
 				alt="Just a random cat"
@@ -153,7 +174,7 @@
 		<div class="preTag">
 			<h3>Pre tag</h3>
 
-			<pre>
+			<pre class="preTag">
         if (time) {
           greeting = 'Good day';
         }
