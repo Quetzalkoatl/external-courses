@@ -1,0 +1,75 @@
+/* Способ номер 1 */
+.rectangle {
+  width: 600px;
+  height: 400px;
+  position: relative;
+  margin: 100px auto;
+  background-color: rgb(74, 141, 109);
+}
+
+.rectangleChildOne {
+  width: 600px;
+  height: 400px;
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background: rgb(139, 199, 169);
+  z-index: -1;
+}
+
+.rectangleChildTwo {
+  width: 600px;
+  height: 400px;
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  background: rgb(191, 227, 209);
+  z-index: -2;
+}
+
+
+
+/* Способ номер 2 */
+/* .rectangle {
+  width: 600px;
+  height: 400px;
+  position: relative;
+  margin: 100px auto;
+  background-color: rgb(74, 141, 109);
+}
+
+.rectangle::before {
+  width: 600px;
+  height: 400px;
+  content: '';
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background: rgb(139, 199, 169);
+  z-index: -1;
+}
+
+.rectangle:after {
+  width: 600px;
+  height: 400px;
+  content: '';
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  background: rgb(191, 227, 209);
+  z-index: -2;
+} */
+
+
+
+/* Способ номер 3 */
+/* .rectangle {
+  width: 600px;
+  height: 400px;
+  margin: 100px auto;
+  background-color: rgb(74, 141, 109);
+
+  box-shadow:
+    10px 10px rgb(139, 199, 169),
+    20px 20px rgb(191, 227, 209);
+} */
