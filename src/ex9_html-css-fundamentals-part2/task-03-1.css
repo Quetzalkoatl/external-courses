@@ -1,0 +1,19 @@
+table {
+  font-family: 'Segoe UI', sans-serif;
+  color: #56637b;
+  margin: 0 auto;
+  border-spacing: 2px;
+}
+
+td {
+  padding: 10px;
+  height: 35px;
+}
+
+tr:hover {
+  background: #e2e5e9;
+}
+
+table tr:first-child:hover {
+  background: #e3eaf3;
+}
