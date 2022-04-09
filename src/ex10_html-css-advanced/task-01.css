@@ -1,45 +1,12 @@
-/* .content-circle {
-  width: 100px;
-  height: 100px;
-  background-color: rgb(100, 100, 100);
-  border-radius: 50%;
-  position: relative;
-  left: 0; */
-
-/* animation-name: white-circle;
-  animation-duration: 2s;
-  animation-timing-function: ease-in;
-  animation-iteration-count: infinite;
-  animation-direction: alternate;
-  animation-delay: 2s; */
-
-/* animation: white-circle 2s linear infinite alternate;
-} */
-
-/* .content-circle:hover {
-  animation-name: none;
+body {
+  margin-left: 40px;
 }
 
-@keyframes white-circle {
-  0% {
-    left: 0;
-  }
-
-  50% {
-    border-radius: 0;
-  }
-
-  100% {
-    left: 500px;
-  }
-} */
-
-/* .tasks {
-  display: block;
-} */
+h3 {
+  margin-top: 60px;
+}
 
 /* Лоадер для страницы */
-
 .loader {
   position: relative;
   height: 200px;
@@ -93,5 +60,52 @@
   100% {
     transform: rotate(360deg);
     box-shadow: 2px 5px 20px rgb(94, 177, 108);
+  }
+}
+
+/* Прыгающий шар */
+.jumping-ball {
+  position: relative;
+  margin-top: 200px;
+}
+
+.blocks {
+  display: flex;
+  width: 400px;
+  justify-content: space-between;
+}
+
+.block-child {
+  height: 150px;
+  width: 150px;
+  background: blue;
+}
+
+.ball {
+  position: absolute;
+  left: 25px;
+  top: -100px;
+  height: 100px;
+  width: 100px;
+  background: red;
+  border-radius: 50%;
+
+  animation: jumping 3s linear 0s infinite alternate;
+}
+
+@keyframes jumping {
+  0% {
+    left: 25px;
+    top: -100px;
+  }
+
+  50% {
+    left: 150px;
+    top: -200px;
+  }
+
+  100% {
+    left: 275px;
+    top: -100px;
   }
 }
