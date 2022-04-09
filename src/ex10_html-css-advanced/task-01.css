@@ -1,0 +1,97 @@
+/* .content-circle {
+  width: 100px;
+  height: 100px;
+  background-color: rgb(100, 100, 100);
+  border-radius: 50%;
+  position: relative;
+  left: 0; */
+
+/* animation-name: white-circle;
+  animation-duration: 2s;
+  animation-timing-function: ease-in;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-delay: 2s; */
+
+/* animation: white-circle 2s linear infinite alternate;
+} */
+
+/* .content-circle:hover {
+  animation-name: none;
+}
+
+@keyframes white-circle {
+  0% {
+    left: 0;
+  }
+
+  50% {
+    border-radius: 0;
+  }
+
+  100% {
+    left: 500px;
+  }
+} */
+
+/* .tasks {
+  display: block;
+} */
+
+/* Лоадер для страницы */
+
+.loader {
+  position: relative;
+  height: 200px;
+  width: 200px;
+}
+
+.loading-text {
+  position: absolute;
+  top: 25%;
+  left: 15%;
+  font-size: 30px;
+  font-family: Impact, sans-serif;
+  letter-spacing: 3px;
+  animation: text-color 3s linear infinite;
+}
+
+.loader-circle {
+  width: 200px;
+  height: 200px;
+  margin-top: 20px;
+  background: rgba(171, 212, 171, .1);
+  border-radius: 50%;
+  animation: rounding 3s linear infinite;
+}
+
+@keyframes text-color {
+  0% {
+    color: rgb(94, 177, 108);
+  }
+
+  50% {
+    color: rgb(34, 75, 0);
+  }
+
+  100% {
+    color: rgb(94, 177, 108);
+  }
+}
+
+@keyframes rounding {
+  0% {
+    transform: rotate(0deg);
+    box-shadow: 2px 5px 20px rgb(94, 177, 108);
+  }
+
+  50% {
+    transform: rotate(180deg);
+    box-shadow: 1px 5px 10px rgb(34, 75, 0);
+  }
+
+  100% {
+    transform: rotate(360deg);
+    box-shadow: 2px 5px 20px rgb(94, 177, 108);
+  }
+}
