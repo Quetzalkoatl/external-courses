@@ -3,7 +3,7 @@ body {
 }
 
 h3 {
-  margin-top: 60px;
+  margin-top: 40px;
 }
 
 /* Лоадер для страницы */
@@ -66,7 +66,7 @@ h3 {
 /* Прыгающий шар */
 .jumping-ball {
   position: relative;
-  margin-top: 200px;
+  margin-top: 180px;
 }
 
 .blocks {
@@ -107,5 +107,79 @@ h3 {
   100% {
     left: 275px;
     top: -100px;
+  }
+}
+
+/* Бесконечная анимация с шагами */
+.test {
+  width: 150px;
+  height: 150px;
+  background: linear-gradient(green, purple);
+  transform: skew(0deg, 0deg);
+
+  animation: infiniteAnimationWithSteps 6s linear 0s infinite;
+}
+
+@keyframes infiniteAnimationWithSteps {
+  0% {
+    border-radius: 50%;
+  }
+
+  10% {
+    border-radius: 50%;
+  }
+
+  20% {
+    border-radius: 0;
+    background: linear-gradient(green, purple);
+  }
+
+  30% {
+    border-radius: 0;
+    background: linear-gradient(green, purple);
+  }
+
+  40% {
+    width: 150px;
+    height: 150px;
+    background: radial-gradient(aqua, maroon);
+    transform: skew(0deg, 0deg);
+  }
+
+  50% {
+    width: 150px;
+    height: 150px;
+    background: radial-gradient(aqua, maroon);
+    transform: skew(0deg, 0deg);
+  }
+
+  60% {
+    width: 200px;
+    height: 120px;
+    transform: skew(15deg, 10deg);
+  }
+
+  70% {
+    width: 200px;
+    height: 120px;
+    transform: skew(15deg, 10deg);
+  }
+
+  80% {
+    transform: rotate(180deg);
+    border-radius: 0;
+  }
+
+  90% {
+    border-radius: 0;
+    transform: rotate(360deg);
+    background: radial-gradient(aqua, maroon);
+  }
+
+  100% {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background: linear-gradient(green, purple);
   }
 }
