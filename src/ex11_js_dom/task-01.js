@@ -22,11 +22,12 @@ function imageStyles() {
   current.style.width = '500px';
   current.style.height = '500px';
   current.style.background = `url(${temp})`;
+  current.style.borderRadius = '10px';
   current.style.position = 'absolute';
   current.style.left = '50%';
   current.style.top = '50%';
   current.style.transform = 'translate(-50%, -50%)';
-  current.style.transition = `all ${animationLength}s ease`;
+  current.style.transition = `background ${animationLength}s ease`;
 }
 
 imageStyles();
