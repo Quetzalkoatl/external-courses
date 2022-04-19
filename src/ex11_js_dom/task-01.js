@@ -11,8 +11,8 @@ const images = [
 ];
 
 // Начальный слайд
-let allImagesLength = 0;
-let temp = images[allImagesLength];
+let currentIndex = 0;
+let temp = images[currentIndex];
 
 // Длительность анимации (в секундах)
 const animationLength = 1;
@@ -44,22 +44,22 @@ function disableButtons() {
 
 // Переключение на предыдущий слайд
 previous.addEventListener('click', () => {
-  if (!allImagesLength) {
-    allImagesLength = images.length;
+  if (!currentIndex) {
+    currentIndex = images.length;
   }
-  allImagesLength -= 1;
-  temp = images[allImagesLength];
+  currentIndex -= 1;
+  temp = images[currentIndex];
   imageStyles();
   disableButtons();
 });
 
 // Переключение на следующий слайд
 next.addEventListener('click', () => {
-  if (allImagesLength === images.length - 1) {
-    allImagesLength = -1;
+  if (currentIndex === images.length - 1) {
+    currentIndex = -1;
   }
-  allImagesLength += 1;
-  temp = images[allImagesLength];
+  currentIndex += 1;
+  temp = images[currentIndex];
   imageStyles();
   disableButtons();
 });
