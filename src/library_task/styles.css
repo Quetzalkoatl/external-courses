@@ -27,14 +27,12 @@ header {
 }
 
 .header-nav-help, .header-nav-support {
-  font-size: 1rem;
+  font-size: 18px;
   font-family: Proxima, sans-serif;
   color: #687085;
-  margin-right: 20px;
-}
-
-.header-nav-support {
-  margin-right: 20px;
+  margin: 0;
+  padding: 15px;
+  text-decoration: none;
 }
 
 .header-nav-support::before {
@@ -46,6 +44,10 @@ header {
   display: inline-block;
   margin-right: 20px;
   margin-bottom: 2px;
+}
+
+.header-nav-support:active::before {
+  background: white;
 }
 
 .header-nav-user {
