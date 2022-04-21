@@ -77,18 +77,266 @@ header {
   margin: 5px 10px 0 10px;
 }
 
+/* Main */
 main {
   width: 100vw;
   height: 88vh;
-  background: #dde0e7
+  display: flex;
 }
 
-/* nav {
+/* Main Aside */
+aside {
   width: 15vw;
   height: 825px;
   max-height: 90vh;
-  background: #1f2638;
-} */
+  background: #1a222f;
+  display: flex;
+  flex-direction: column;
+}
+
+.addBook, .nav, .hints {
+  background-color: #1f2638;
+  margin-bottom: 8px;
+}
+
+.addBook {
+  text-align: center;
+}
+
+.nav {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.btn {
+  padding: 10px;
+  margin: 20px 0;
+  width: 70%;
+  height: 50px;
+  border: none;
+  border-radius: 5px;
+
+  font-family: Proxima, sans-serif;
+  font-size: 18px;
+  color: white;
+
+  background: #f2795a;
+}
+
+.btn::before {
+  font-family: 'FontAwesome';
+  content: '\f067';
+  margin-right: 15px;
+}
+
+.btn:hover {
+  background: #c06149;
+  color: #ffb9a8;
+}
+
+a {
+  font-family: Proxima, sans-serif;
+  font-size: 18px;
+  color: #7e8598;
+  padding-left: 20px;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  margin: 0;
+  text-decoration: none;
+}
+
+a:active, a:active::before {
+  background: #16a4fa;
+  color: white;
+}
+
+.reading::before {
+  font-family: 'FontAwesome';
+  content: '\f02d';
+  margin-right: 15px;
+  color: #7e8598;
+}
+
+.browse::before {
+  font-family: 'FontAwesome';
+  content: '\f0ac';
+  margin-right: 15px;
+  color: #7e8598;
+}
+
+.buyBooks::before {
+  font-family: 'FontAwesome';
+  content: '\f07a';
+  margin-right: 15px;
+  color: #7e8598;
+}
+
+.favoriteBooks::before {
+  font-family: 'FontAwesome';
+  content: '\f005';
+  margin-right: 15px;
+  color: #7e8598;
+}
+
+.wishlist::before {
+  font-family: 'FontAwesome';
+  content: '\f03a';
+  margin-right: 15px;
+  color: #7e8598;
+}
+
+.history::before {
+  font-family: 'FontAwesome';
+  content: '\f017';
+  margin-right: 15px;
+  color: #7e8598;
+}
+
+.hints {
+  font-family: Proxima, sans-serif;
+  font-size: 15px;
+  color: #7e8598;
+  padding-left: 25px;
+}
+
+.hints p::before {
+  font-family: 'FontAwesome';
+  content: '\f111';
+  margin-right: 15px;
+  font-size: 7px;
+  padding-right: 5px;
+  vertical-align: 50%;
+  color: #7e8598;
+}
+
+.hints p:first-child::before {
+  color: #ec525e;
+}
+
+.hints p:nth-child(2)::before {
+  color: #fda90b;
+}
+
+.hints p:nth-child(3)::before {
+  color: #02bedb;
+}
+
+.hints p:nth-child(4)::before {
+  color: #7771d3;
+}
+
+.added {
+  font-family: Proxima, sans-serif;
+  font-size: 13px;
+  color: #525a6d;
+  padding-left: 20px;
+  height: 40%;
+  background-color: #1f2638;
+}
+
+.addedSection {
+  display: flex;
+  flex-direction: column;
+  margin-right: 10px;
+}
+
+.sectionPart {
+  display: flex;
+}
+
+.added .addedText {
+  padding: 10px 5px 0 0;
+}
+
+.added .addedText span {
+  color: #7e8598;
+  font-weight: bold;
+}
+
+.addedIcon::before {
+  display: inline-block;
+  font-family: 'FontAwesome';
+  font-size: 20px;
+  content: '\f017';
+  margin-right: 15px;
+  color: #535b6e;
+  margin-top: 25px;
+}
+
+.addedTime {
+  margin-bottom: 30px;
+  padding-left: 30px;
+  margin-top: 0;
+  margin-bottom: 15px;
+}
+
+/* Main Books Section*/
+
+/* Books Section Header */
+.booksHeader {
+  width: 85vw;
+  height: 120px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: #eef1f8;
+}
+
+.booksList {
+  width: 85vw;
+  height: 705px;
+  display: flex;
+  background-color: #157477;
+}
+
+.booksHeaderTitle {
+  font-family: Proxima, sans-serif;
+  font-size: 26px;
+  color: #3e455f;
+  margin: 0;
+  padding-left: 40px;
+  padding-top: 15px;
+}
+
+.booksNav {
+  display: flex;
+  justify-content: space-between;
+  border: 1px solid #dde0e7;
+  padding: 15px 0;
+}
+
+.booksNavLinks {
+  padding-left: 30px;
+  padding-top: 8px;
+}
+
+.booksNavLink {
+  border: none;
+  border-radius: 25px;
+  background: #eef1f8;
+  color: #838aa8;
+  padding: 4px 10px;
+  font-family: Proxima, sans-serif;
+  font-size: 15px;
+}
+
+.booksNavLink:active {
+  background: #98b3ce
+}
+
+.booksSearchBar {
+  width: 420px;
+  height: 30px;
+  border: 1px solid #dde0e7;
+  border-radius: 20px;
+  margin-right: 40px;
+  padding-left: 20px;
+}
+
+.booksSearchBar::placeholder {
+  color: #9399b1;
+}
 
 /* Footer */
 footer {
