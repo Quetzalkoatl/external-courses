@@ -94,12 +94,12 @@ aside {
   flex-direction: column;
 }
 
-.addBook, .nav, .hints {
+.add-book, .nav, .hints {
   background-color: #1f2638;
   margin-bottom: 8px;
 }
 
-.addBook {
+.add-book {
   text-align: center;
 }
 
@@ -135,7 +135,7 @@ aside {
   color: #ffb9a8;
 }
 
-a {
+.nav a {
   font-family: Proxima, sans-serif;
   font-size: 18px;
   color: #7e8598;
@@ -165,14 +165,14 @@ a:active, a:active::before {
   color: #7e8598;
 }
 
-.buyBooks::before {
+.buy-books::before {
   font-family: 'FontAwesome';
   content: '\f07a';
   margin-right: 15px;
   color: #7e8598;
 }
 
-.favoriteBooks::before {
+.favorite-books::before {
   font-family: 'FontAwesome';
   content: '\f005';
   margin-right: 15px;
@@ -194,36 +194,54 @@ a:active, a:active::before {
 }
 
 .hints {
+  display: flex;
+  flex-direction: column;
+  padding-left: 13px;
+}
+
+.hints a {
   font-family: Proxima, sans-serif;
   font-size: 15px;
   color: #7e8598;
-  padding-left: 25px;
+  margin: 0;
+  padding: 10px;
+  text-decoration: none;
 }
 
-.hints p::before {
+.hints a::before {
   font-family: 'FontAwesome';
   content: '\f111';
   margin-right: 15px;
   font-size: 7px;
   padding-right: 5px;
   vertical-align: 50%;
-  color: #7e8598;
 }
 
-.hints p:first-child::before {
+.hints a:active {
+  color: white;
+}
+
+.hints a:first-child::before {
   color: #ec525e;
 }
 
-.hints p:nth-child(2)::before {
+.hints a:nth-child(2)::before {
   color: #fda90b;
 }
 
-.hints p:nth-child(3)::before {
+.hints a:nth-child(3)::before {
   color: #02bedb;
 }
 
-.hints p:nth-child(4)::before {
+.hints a:nth-child(4)::before {
   color: #7771d3;
+}
+
+.hints a:first-child:active::before,
+a:nth-child(2):active::before,
+a:nth-child(3):active::before,
+a:nth-child(4):active::before {
+  color: white;
 }
 
 .added {
@@ -235,26 +253,26 @@ a:active, a:active::before {
   background-color: #1f2638;
 }
 
-.addedSection {
+.added-section {
   display: flex;
   flex-direction: column;
   margin-right: 10px;
 }
 
-.sectionPart {
+.section-part {
   display: flex;
 }
 
-.added .addedText {
-  padding: 10px 5px 0 0;
+.added .added-text {
+  padding: 10px 30px 0 0;
 }
 
-.added .addedText span {
+.added .added-text span {
   color: #7e8598;
   font-weight: bold;
 }
 
-.addedIcon::before {
+.added-icon::before {
   display: inline-block;
   font-family: 'FontAwesome';
   font-size: 20px;
@@ -264,7 +282,7 @@ a:active, a:active::before {
   margin-top: 25px;
 }
 
-.addedTime {
+.added-time {
   margin-bottom: 30px;
   padding-left: 30px;
   margin-top: 0;
@@ -274,7 +292,7 @@ a:active, a:active::before {
 /* Main Books Section*/
 
 /* Books Section Header */
-.booksHeader {
+.books-header {
   width: 85vw;
   height: 120px;
   display: flex;
@@ -283,35 +301,35 @@ a:active, a:active::before {
   background-color: #eef1f8;
 }
 
-.booksList {
+.books-list {
   width: 85vw;
   height: 705px;
   display: flex;
-  background-color: #157477;
+  background-color: white;
 }
 
-.booksHeaderTitle {
+.books-header-title {
   font-family: Proxima, sans-serif;
   font-size: 26px;
   color: #3e455f;
   margin: 0;
   padding-left: 40px;
-  padding-top: 15px;
+  padding-top: 10px;
 }
 
-.booksNav {
+.books-nav {
   display: flex;
   justify-content: space-between;
   border: 1px solid #dde0e7;
   padding: 15px 0;
 }
 
-.booksNavLinks {
+.books-nav-links {
   padding-left: 30px;
   padding-top: 8px;
 }
 
-.booksNavLink {
+.books-nav-link {
   border: none;
   border-radius: 25px;
   background: #eef1f8;
@@ -319,23 +337,58 @@ a:active, a:active::before {
   padding: 4px 10px;
   font-family: Proxima, sans-serif;
   font-size: 15px;
+  text-decoration: none;
 }
 
-.booksNavLink:active {
+.books-nav-link:active {
   background: #98b3ce
 }
 
-.booksSearchBar {
+.books-search-bar {
+  display: flex;
+  justify-content: space-between;
+  padding: 2px;
   width: 420px;
   height: 30px;
   border: 1px solid #dde0e7;
   border-radius: 20px;
   margin-right: 40px;
   padding-left: 20px;
+  background: white;
 }
 
-.booksSearchBar::placeholder {
-  color: #9399b1;
+.search-bar-input {
+  width: 350px;
+  font-family: Proxima, sans-serif;
+  border: none;
+  background: transparent;
+  margin: 0;
+  padding: 7px 8px;
+  font-size: 14px;
+  color: #8d97b2;
+}
+
+.search-bar-input::placeholder {
+  color: #8d97b2;
+}
+
+.search-bar-input:focus {
+  outline: none;
+}
+
+.search-bar-button {
+  width: 20px;
+  height: 20px;
+  padding: 0;
+  margin: 5px 15px 0 0;
+  background: url('./assets/img/icons/search.png') no-repeat;
+  background-size: cover;
+  border: none;
+  opacity: .5;
+}
+
+.search-bar-button:hover {
+  opacity: 1;
 }
 
 /* Footer */
@@ -343,6 +396,9 @@ footer {
   width: 100vw;
   height: 6vh;
   background: #181e2c;
+}
+
+.footer-nav {
   display: flex;
   justify-content: flex-end;
 }
@@ -354,15 +410,6 @@ footer {
   position: relative;
 }
 
-.question-image {
-  width: 25px;
-  height: 25px;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-
 .cogwheel {
   width: 4vw;
   height: 6vh;
@@ -370,11 +417,31 @@ footer {
   position: relative;
 }
 
-.cogwheel-image {
-  width: 30px;
-  height: 30px;
+.question-icon, .cogwheel-icon {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+}
+
+.question-icon {
+  width: 20px;
+  height: 20px;
+  background: url('./assets/img/icons/question_mark.png') no-repeat;
+  background-size: cover;
+}
+
+.cogwheel-icon {
+  width: 25px;
+  height: 25px;
+  background: url('./assets/img/icons/cogwheel.png') no-repeat;
+  background-size: cover;
+}
+
+.question:hover {
+  background: #10141d;
+}
+
+.cogwheel:hover {
+  background: #1281c7;
 }
