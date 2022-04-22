@@ -164,6 +164,7 @@ const searchButton = document.getElementById('search-bar-button');
 const cellsFilter = [];
 
 searchButton.addEventListener('click', () => {
+  event.preventDefault();
   for (let i = 0; i < books.length; i += 1) {
     if (
       books[i].title.toLowerCase().includes(searchFilter.value.toLowerCase())
