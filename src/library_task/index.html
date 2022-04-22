@@ -60,18 +60,20 @@
 								<p class="books-header-title">Browse Available Books</p>
 								<div class="books-nav">
 									<div class="books-nav-links">
-										<button class="books-nav-link">All Books</button>
+										<button class="books-nav-link" id="all-books">All Books</button>
 										<button class="books-nav-link">Most Recent</button>
-										<button class="books-nav-link">Most popular</button>
+										<button class="books-nav-link" id="most-popular">Most popular</button>
 										<button class="books-nav-link">Free Books</button>
 									</div>
 									<form class="books-search-bar">
-										<input type="text" class="search-bar-input" placeholder="Enter Keywords"></input>
-										<button class="search-bar-button"></button>
+										<input type="text" class="search-bar-input" id="search-bar-input" placeholder="Enter Keywords"></input>
+										<button class="search-bar-button" id="search-bar-button"></button>
 									</form>
 								</div>
 						</div>
-						<div class="books-list"></div>
+						<div class="books-list">
+							<div id="book-cell"></div>
+						</div>
 					</section>
 			</main>
 			<footer>
