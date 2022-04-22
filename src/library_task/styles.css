@@ -343,7 +343,8 @@ a:nth-child(4):active::before {
 }
 
 .books-nav-link:active {
-  background: #98b3ce
+  background: #98b3ce;
+  color: white;
 }
 
 .books-search-bar {
