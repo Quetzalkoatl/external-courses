@@ -143,7 +143,7 @@ bookCell.style.overflowY = 'scroll';
 
 for (let i = 0; i < books.length; i += 1) {
   cells.push(`<div style='margin: 10px 10px 10px 20px'>
-                  <img style='width: 170px; border-radius: 5px' 
+                  <img style='width: 170px; border-radius: 5px; margin-top: 5px' 
                   src='${books[i].url}'>
                   <p style='font-family: Proxima; font-size: 16px; color: #24252e; margin: 8px 0 2px 0'>
                   ${books[i].title}
@@ -171,7 +171,7 @@ searchButton.addEventListener('click', () => {
 			|| books[i].author.toLowerCase().includes(searchFilter.value.toLowerCase())
     ) {
       cellsFilter.push(`<div style='margin: 10px 10px 10px 20px'>
-      <img style='width: 170px; border-radius: 5px' 
+      <img style='width: 170px; border-radius: 5px; margin-top: 5px' 
       src='${books[i].url}'>
       <p style='font-family: Proxima; font-size: 16px; color: #24252e; margin: 8px 0 2px 0'>
       ${books[i].title}
