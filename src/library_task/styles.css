@@ -34,7 +34,7 @@ header {
   text-decoration: none;
 }
 
-.header-dot::before {
+.header-nav-dot::before {
   content: "\A";
   width: 5px;
   height: 5px;
