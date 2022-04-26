@@ -34,18 +34,17 @@ header {
   text-decoration: none;
 }
 
-.header-nav-support::before {
+.header-dot::before {
   content: "\A";
   width: 5px;
   height: 5px;
   border-radius: 50%;
   background: #1d2437;
   display: inline-block;
-  margin-right: 27px;
-  margin-bottom: 2px;
+  margin-top: 25px;
 }
 
-.header-nav-support:active::before {
+.header-nav-help:active, .header-nav-support:active {
   background: white;
 }
 
