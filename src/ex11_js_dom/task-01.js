@@ -22,6 +22,8 @@ function imageStyles() {
   current.style.width = '500px';
   current.style.height = '500px';
   current.style.background = `url(${temp})`;
+  current.style.backgroundRepeat = 'no-repeat';
+  current.style.backgroundSize = 'contain';
   current.style.borderRadius = '10px';
   current.style.position = 'absolute';
   current.style.left = '50%';
