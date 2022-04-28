@@ -1,0 +1,140 @@
+@font-face {
+  font-family: 'FontAwesome';
+  src: url('assets/fonts/FontAwesome.otf');
+}
+
+@font-face {
+  font-family: 'Proxima';
+  src: url('assets/fonts/Proxima\ Nova\ Regular.otf');
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+/* Header */
+header {
+  width: 100vw;
+  height: 6vh;
+  background: #2f3649;
+}
+
+.header-nav {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.header-nav-help, .header-nav-support {
+  font-size: 18px;
+  font-family: Proxima, sans-serif;
+  color: #687085;
+  margin: 0;
+  padding: 15px;
+  text-decoration: none;
+}
+
+.header-nav-dot::before {
+  content: "\A";
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: #1d2437;
+  display: inline-block;
+  margin-top: 25px;
+}
+
+.header-nav-help:active, .header-nav-support:active {
+  background: white;
+}
+
+.header-nav-user {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #16a4fa;
+  height: 6vh;
+}
+
+.header-nav-user-photo {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-left: 10px;
+  outline: 2px solid white;
+}
+
+.header-nav-user-name {
+  font-family: Proxima, sans-serif;
+  margin-left: 10px;
+  color: white;
+}
+
+.header-nav-user-name::after {
+  font-family: 'FontAwesome';
+  content: '\f0ab';
+  color: white;
+  margin: 5px 10px 0 10px;
+}
+
+/* Main */
+main {
+  width: 100vw;
+  height: 88vh;
+  display: flex;
+}
+
+/* Footer */
+footer {
+  width: 100vw;
+  height: 6vh;
+  background: #181e2c;
+}
+
+.footer-nav {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.question {
+  width: 4vw;
+  height: 6vh;
+  background: #1f2638;
+  position: relative;
+}
+
+.cogwheel {
+  width: 4vw;
+  height: 6vh;
+  background: #16a4fa;
+  position: relative;
+}
+
+.question-icon, .cogwheel-icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.question-icon {
+  width: 20px;
+  height: 20px;
+  background: url('./assets/img/icons/question_mark.png') no-repeat;
+  background-size: cover;
+}
+
+.cogwheel-icon {
+  width: 25px;
+  height: 25px;
+  background: url('./assets/img/icons/cogwheel.png') no-repeat;
+  background-size: cover;
+}
+
+.question:hover {
+  background: #10141d;
+}
+
+.cogwheel:hover {
+  background: #1281c7;
+}
