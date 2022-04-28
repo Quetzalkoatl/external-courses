@@ -128,6 +128,7 @@ const books = [
   },
 ];
 
+// Отрисовка книг на странице
 const bookCell = document.getElementById('book-cell');
 const cells = [];
 
@@ -157,58 +158,3 @@ for (let i = 0; i < books.length; i += 1) {
 
   bookCell.innerHTML += cells[i];
 }
-
-// Search
-const searchFilter = document.getElementById('search-bar-input');
-const searchButton = document.getElementById('search-bar-button');
-const cellsFilter = [];
-
-searchButton.addEventListener('click', () => {
-  event.preventDefault();
-  for (let i = 0; i < books.length; i += 1) {
-    if (
-      books[i].title.toLowerCase().includes(searchFilter.value.toLowerCase())
-			|| books[i].author.toLowerCase().includes(searchFilter.value.toLowerCase())
-    ) {
-      cellsFilter.push(`<div style='margin: 10px 10px 10px 20px'>
-      <img style='width: 170px; border-radius: 5px; margin-top: 5px' 
-      src='${books[i].url}'>
-      <p style='font-family: Proxima; font-size: 16px; color: #24252e; margin: 8px 0 2px 0'>
-      ${books[i].title}
-      </p>
-      <p style='font-family: Proxima; font-size: 13px; color: #646f86; margin: 0 0 5px 0'>by 
-      ${books[i].author}
-      </p>
-      ${fullStar.repeat(books[i].rating)}
-      ${emptyStar.repeat(5 - books[i].rating)}
-      </div>`);
-    }
-  }
-  bookCell.innerHTML = '';
-  for (let i = 0; i < cellsFilter.length; i += 1) {
-    bookCell.innerHTML += cellsFilter[i];
-  }
-  cellsFilter.length = 0;
-});
-
-// All books
-const allBooks = document.getElementById('all-books');
-
-allBooks.addEventListener('click', () => {
-  bookCell.innerHTML = '';
-  for (let i = 0; i < cells.length; i += 1) {
-    bookCell.innerHTML += cells[i];
-  }
-});
-
-// Most Popular books
-const mostPopularBooks = document.getElementById('most-popular');
-
-mostPopularBooks.addEventListener('click', () => {
-  bookCell.innerHTML = '';
-  for (let i = 0; i < books.length; i += 1) {
-    if (books[i].rating === 5) {
-      bookCell.innerHTML += cells[i];
-    }
-  }
-});

@@ -13,7 +13,6 @@ body {
   padding: 0;
 }
 
-
 /* Header */
 header {
   width: 100vw;
@@ -35,18 +34,18 @@ header {
   text-decoration: none;
 }
 
-.header-nav-support::before {
+.header-nav-dot::before {
   content: "\A";
   width: 5px;
   height: 5px;
   border-radius: 50%;
   background: #1d2437;
   display: inline-block;
-  margin-right: 20px;
-  margin-bottom: 2px;
+  margin-top: 25px;
 }
 
-.header-nav-support:active::before {
+.header-nav-help:active, .header-nav-support:active {
+  color: #687085;
   background: white;
 }
 
@@ -392,6 +391,16 @@ a:nth-child(4):active::before {
 
 .search-bar-button:hover {
   opacity: 1;
+}
+
+/* Scroll bar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #ced5e5;
+  border-radius: 10px;
 }
 
 /* Footer */
