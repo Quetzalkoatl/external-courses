@@ -25,9 +25,10 @@ function Calculator() {
       value = 0;
       return this;
     },
-    async fetchData(callback) {
-      await callback;
-      value = 500;
+    fetchData(callback) {
+      Promise.resolve(callback).then(() => {
+        value = 500;
+      });
       return this;
     },
     getResult() {
@@ -38,11 +39,4 @@ function Calculator() {
 
 const calculator = new Calculator();
 
-// module.exports = calculator;
-console.log(calculator.getResult()); // 0
-
-calculator.fetchData(calculator.add(50));
-
-// -- завершение асинхронной операции --
-
-console.log(calculator.getResult()); // 500
+module.exports = calculator;
