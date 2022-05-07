@@ -26,9 +26,7 @@ function Calculator() {
       return this;
     },
     fetchData(callback) {
-      Promise.resolve(callback).then(() => {
-        value = 500;
-      });
+      Promise.resolve(callback).then((value = 500));
       return this;
     },
     getResult() {
