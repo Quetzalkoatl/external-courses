@@ -128,13 +128,8 @@ const books = [
   },
 ];
 
-// Отрисовка книг на странице
 const bookCell = document.getElementById('book-cell');
 const cells = [];
-
-const fullStar =	"<img style='width: 15px; margin: 5px 2px 5px 2px' src='./assets/img/icons/full_star.png'>";
-
-const emptyStar =	"<img style='width: 15px; margin: 5px 4px 5px 0;' src='./assets/img/icons/empty_star.png'>";
 
 bookCell.style.width = '85vw';
 bookCell.style.maxWidth = '85vw';
@@ -142,19 +137,133 @@ bookCell.style.display = 'flex';
 bookCell.style.flexWrap = 'wrap';
 bookCell.style.overflowY = 'scroll';
 
-for (let i = 0; i < books.length; i += 1) {
-  cells.push(`<div style='margin: 10px 10px 10px 20px'>
-                  <img style='width: 170px; border-radius: 5px; margin-top: 5px' 
-                  src='${books[i].url}'>
-                  <p style='font-family: Proxima; font-size: 16px; color: #24252e; margin: 8px 0 2px 0'>
-                  ${books[i].title}
-                  </p>
-                  <p style='font-family: Proxima; font-size: 13px; color: #646f86; margin: 0 0 5px 0'>by 
-                  ${books[i].author}
-                  </p>
-                  ${fullStar.repeat(books[i].rating)}
-                  ${emptyStar.repeat(5 - books[i].rating)}
-                </div>`);
+// Books view
+function booksView() {
+  for (let i = 0; i < books.length; i += 1) {
+    cells.push(`<div style='margin: 10px 10px 10px 20px'>
+                    <img style='width: 170px; border-radius: 5px; margin-top: 5px' 
+                    src='${books[i].url}'>
+                    <p style='font-family: Proxima; font-size: 16px; color: #24252e; margin: 8px 0 2px 0'>
+                    ${books[i].title}
+                    </p>
+                    <p style='font-family: Proxima; font-size: 13px; color: #646f86; margin: 0 0 5px 0'>by 
+                    ${books[i].author}
+                    </p>
+                      <div class="rating" data-total-value="${books[i].rating}">
+                        <div class="rating__item" data-item-value="5">★</div>
+                        <div class="rating__item" data-item-value="4">★</div>
+                        <div class="rating__item" data-item-value="3">★</div>
+                        <div class="rating__item" data-item-value="2">★</div>
+                        <div class="rating__item" data-item-value="1">★</div>
+                      </div>
+                  </div>`);
 
-  bookCell.innerHTML += cells[i];
+    bookCell.innerHTML += cells[i];
+  }
 }
+
+booksView();
+
+// Stars rating
+const ratingItemsList = document.querySelectorAll('.rating__item');
+
+ratingItemsList.forEach((elem, id) => {
+  const temp = elem;
+  temp.addEventListener('click', () => {
+    const itemValue = elem.dataset.itemValue;
+    temp.parentNode.dataset.totalValue = itemValue;
+    books[Math.floor(id / 5)].rating = itemValue;
+  });
+});
+
+// Search
+const searchFilter = document.getElementById('search-bar-input');
+const searchButton = document.getElementById('search-bar-button');
+const cellsFilter = [];
+
+searchButton.addEventListener('click', () => {
+  event.preventDefault();
+  for (let i = 0; i < books.length; i += 1) {
+    if (
+      books[i].title.toLowerCase().includes(searchFilter.value.toLowerCase())
+			|| books[i].author.toLowerCase().includes(searchFilter.value.toLowerCase())
+    ) {
+      cellsFilter.push(`<div style='margin: 10px 10px 10px 20px'>
+      <img style='width: 170px; border-radius: 5px; margin-top: 5px' 
+      src='${books[i].url}'>
+      <p style='font-family: Proxima; font-size: 16px; color: #24252e; margin: 8px 0 2px 0'>
+      ${books[i].title}
+      </p>
+      <p style='font-family: Proxima; font-size: 13px; color: #646f86; margin: 0 0 5px 0'>by 
+      ${books[i].author}
+      </p>
+        <div class="rating" data-total-value="${books[i].rating}">
+          <div class="rating__item" data-item-value="5">★</div>
+          <div class="rating__item" data-item-value="4">★</div>
+          <div class="rating__item" data-item-value="3">★</div>
+          <div class="rating__item" data-item-value="2">★</div>
+          <div class="rating__item" data-item-value="1">★</div>
+        </div>
+      </div>`);
+    }
+  }
+  bookCell.innerHTML = '';
+  for (let i = 0; i < cellsFilter.length; i += 1) {
+    bookCell.innerHTML += cellsFilter[i];
+  }
+  cellsFilter.length = 0;
+});
+
+// All books
+const allBooks = document.getElementById('all-books');
+
+allBooks.addEventListener('click', () => {
+  cells.length = 0;
+  bookCell.innerHTML = '';
+  booksView();
+});
+
+// Most Popular books
+const mostPopularBooks = document.getElementById('most-popular');
+const mostPopularFilter = [];
+
+mostPopularBooks.addEventListener('click', () => {
+  bookCell.innerHTML = '';
+  books.forEach((elem) => {
+    if (elem.rating == 5) {
+      mostPopularFilter.push(`<div style='margin: 10px 10px 10px 20px'>
+      <img style='width: 170px; border-radius: 5px; margin-top: 5px' 
+      src='${elem.url}'>
+      <p style='font-family: Proxima; font-size: 16px; color: #24252e; margin: 8px 0 2px 0'>
+      ${elem.title}
+      </p>
+      <p style='font-family: Proxima; font-size: 13px; color: #646f86; margin: 0 0 5px 0'>by 
+      ${elem.author}
+      </p>
+        <div class="rating" data-total-value="${elem.rating}">
+          <div class="rating__item" data-item-value="5">★</div>
+          <div class="rating__item" data-item-value="4">★</div>
+          <div class="rating__item" data-item-value="3">★</div>
+          <div class="rating__item" data-item-value="2">★</div>
+          <div class="rating__item" data-item-value="1">★</div>
+        </div>
+      </div>`);
+    }
+  });
+  mostPopularFilter.forEach((elem) => {
+    bookCell.innerHTML += elem;
+  });
+});
+
+// Add book
+const addBook = document.getElementById('add-book-btn');
+const popup = document.getElementById('popup');
+const saveBook = document.getElementById('save-book-input');
+
+addBook.addEventListener('click', () => {
+  popup.style.display = 'block';
+});
+
+saveBook.addEventListener('click', () => {
+  popup.style.display = 'none';
+});
