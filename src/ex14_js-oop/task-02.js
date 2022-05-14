@@ -31,11 +31,9 @@ const laptop = new ElectricDevice({
   powerStatus: false,
 });
 
-const ROOM = [];
+const ROOM = [teapot, lamp, smartphone, laptop];
 
-ROOM.push(teapot, lamp, smartphone, laptop);
-
-function search(obj, name) {
+function searchForDevice(obj, name) {
   for (const key in obj) {
     if (obj.hasOwnProperty(key)) {
       if (obj[key].name === name) {
@@ -59,6 +57,6 @@ function totalPower(obj) {
   console.log(`Total power is: ${power}`);
 }
 
-search(ROOM, 'laptop');
+searchForDevice(ROOM, 'laptop');
 
 totalPower(ROOM);
