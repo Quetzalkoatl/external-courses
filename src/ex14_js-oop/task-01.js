@@ -1,4 +1,5 @@
 /* eslint-disable no-unused-vars */
+
 // Robot class
 class Robot {
   constructor(options) {
