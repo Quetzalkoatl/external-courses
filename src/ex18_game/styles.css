@@ -1,0 +1,131 @@
+p {
+  margin: 5px 25px 5px 0px;
+  text-align: center;
+}
+
+body {
+  background-color: rgb(198, 205, 211);
+}
+
+#charactersFeaturesBtn {
+  display: block;
+}
+
+#restartTheGame {
+  display: none;
+}
+
+#setWarriorName, #setHealerName, #setMonsterName {
+  font-family: 'Segoe UI', sans-serif;
+  font-size: 22px;
+  text-align: center;
+  padding-bottom: 5px;
+}
+
+#warriorActionBtn, #healWarriorBtn, #healMonsterBtn {
+  font-family: 'Segoe UI', sans-serif;
+  color: white;
+  font-size: 20px;
+  display: none;
+  width: 180px;
+  height: 30px;
+  margin-top: 10px;
+  margin-left: 60px;
+  border-radius: 10px;
+  border: none;
+}
+
+#warriorActionBtn {
+  background-color: rgb(201, 69, 69);
+  margin-top: 25px;
+  margin-bottom: 0;
+}
+
+#warriorActionBtn:hover {
+  background-color: rgb(255, 0, 0)
+}
+
+#healWarriorBtn, #healMonsterBtn {
+  background-color: rgb(58, 156, 58);
+}
+
+#healHimselfBtn:hover, #healWarriorBtn:hover, #healMonsterBtn:hover {
+  background-color: rgb(25, 221, 25);
+}
+
+#charactersFeaturesBtn, #restartTheGame {
+  width: 250px;
+  height: 50px;
+  font-family: 'Segoe UI', sans-serif;
+  font-size: 25px;
+  letter-spacing: 3px;
+  border-radius: 10px;
+  border: none;
+  background: rgb(101, 116, 101);
+  color: white;
+}
+
+#charactersFeaturesBtn:hover, #restartTheGame:hover {
+  background: rgb(146, 190, 146);
+  color: rgb(39, 87, 8);
+}
+
+.setName {
+  display: block;
+  width: 190px;
+  height: 50px;
+  margin-top: 30px;
+  margin-left: 50px;
+  font-size: 20px;
+  color: rgb(10, 75, 10);
+  border-radius: 10px;
+  border: none;
+}
+
+.warrior, .healer, .monster {
+  width: 300px;
+  height: 350px;
+  border-radius: 5%;
+  background: rgb(59, 59, 59);
+  margin-top: 50px;
+}
+
+.characters {
+  width: 99vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.healer, .warrior {
+  margin: 50px;
+}
+
+.players {
+  display: flex;
+}
+
+.monsterName, .warriorName, .healerName {
+  font-family: 'Segoe UI', sans-serif;
+  font-size: 25px;
+  margin-left: 30px;
+  color: white;
+}
+
+#monsterHealth, #monsterMinAttack, #monsterMaxAttack, #warriorHealth, #warriorMinAttack, #warriorMaxAttack, #healerHealth, #healerMinHeal, #healerMaxHeal {
+  font-family: 'Segoe UI', sans-serif;
+  font-size: 20px;
+  margin-left: 30px;
+  color: white;
+}
+
+#monsterAvatar, #warriorAvatar, #healerAvatar {
+  position: fixed;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  border: 5px solid rgb(168, 168, 168);
+  margin-top: 140px;
+  margin-left: 70px;
+  filter: saturate(150%);
+}
