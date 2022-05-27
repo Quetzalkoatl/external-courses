@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="styles.css" />
+		<title>Document</title>
+	</head>
+
+	<body>
+		<div class="characters">
+			<div class="monster">
+				<p class="monsterName"></p>
+				<p id="monsterHealth"></p>
+				<p id="monsterMinAttack"></p>
+				<p id="monsterMaxAttack"></p>
+				<input
+					type="text"
+					placeholder="Monster Name"
+					class="setName"
+					id="setMonsterName"
+				/>
+				<img id="monsterAvatar" src="./img/monster_art.png" />
+			</div>
+			<div class="players">
+				<div class="warrior">
+					<p class="warriorName"></p>
+					<p id="warriorHealth"></p>
+					<p id="warriorMinAttack"></p>
+					<p id="warriorMaxAttack"></p>
+					<input
+						type="text"
+						placeholder="Warrior Name"
+						class="setName"
+						id="setWarriorName"
+					/>
+					<button id="warriorActionBtn">Attack</button>
+					<img id="warriorAvatar" src="./img/warrior_art.png" />
+				</div>
+				<div class="healer">
+					<p class="healerName"></p>
+					<p id="healerHealth"></p>
+					<p id="healerMinHeal"></p>
+					<p id="healerMaxHeal"></p>
+					<input
+						type="text"
+						placeholder="Healer Name"
+						class="setName"
+						id="setHealerName"
+					/>
+					<button id="healWarriorBtn">Heal warrior</button>
+					<button id="healMonsterBtn">Heal monster</button>
+					<img id="healerAvatar" src="./img/healer_art.png" />
+				</div>
+			</div>
+			<button id="charactersFeaturesBtn">START</button>
+			<button id="restartTheGame">RESTART</button>
+		</div>
+		<script src="main.js"></script>
+	</body>
+</html>
