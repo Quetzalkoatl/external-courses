@@ -1,0 +1,23 @@
+.odd {
+  background: #e3eaf3;
+}
+
+.even {
+  background: #f2f6fa;
+}
+
+.name {
+  text-transform: capitalize;
+}
+
+#title {
+  font-size: 12px;
+  text-transform: uppercase;
+  font-weight: bold;
+  text-align: center;
+}
+
+.titleTd {
+  padding: 0;
+  height: 25px;
+}
